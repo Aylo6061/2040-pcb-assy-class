@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "2040pad_kimera") (type "KiCad") (uri "${KIPRJMOD}/2040pad_kimera_libs/symbols/2040pad_kimera.kicad_sym") (options "") (descr ""))
+)
