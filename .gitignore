@@ -1,0 +1,95 @@
+# KiCad
+
+# Temporary / backup files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups/
+*.kicad_prl
+*.sch-bak
+*~
+~*
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+~*.lck
+\#auto_saved_files#
+
+# KiCad 9 local history (contains its own nested git repo)
+.history/
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Exported BOM files
+*.xml
+*.csv
+
+# Other fab exports (pick-and-place, IPC-D-356 netlist, fab plugin output dirs)
+*.pos
+*.d356
+*.ipc
+production/
+jlcpcb/
+gerbers/
+Gerbers/
+
+# Gerber outputs (KiCad, Protel-style and Eagle CAM extensions)
+*.gbr
+*.gbrjob
+*.gtl
+*.gbl
+*.gto
+*.gbo
+*.gts
+*.gbs
+*.gtp
+*.gbp
+*.gko
+*.gm[0-9]*
+*.g[0-9]
+*.gl[0-9]*
+*.gp[0-9]*
+*.gml
+*.cmp
+*.sol
+*.stc
+*.sts
+*.plc
+*.pls
+*.crc
+*.crs
+*.gpi
+*.dri
+
+# Drill outputs
+*.drl
+*.drd
+*.xln
+*.exc
+
+# Eagle backups / temp files
+*.[bsl]#[0-9]
+*.[bsl]$[0-9]
+*.job#[0-9]
+*.cam#[0-9]
+eagle.epf
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Case design, not ready to publish yet
+mechanical/
+
+# Placewise project files
+*.placewise

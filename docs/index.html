@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex"><!-- Remove to let search engines list this page -->
+  <title>PCB Soldering Class</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f5ef;
+      --text: #1d2420;
+      --line: #d5d3c8;
+      --accent: #0b6b3f;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121714;
+        --text: #eaeee9;
+        --line: #303833;
+        --accent: #58c48c;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2rem 1rem 5rem;
+    }
+
+    section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child { border-bottom: 0; }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: clamp(1.6rem, 5vw, 2.1rem);
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+    }
+
+    p, ul, ol { margin-bottom: 0; }
+    li + li { margin-top: 0.35rem; }
+    a { color: var(--accent); }
+
+    img {
+      display: block;
+      margin-top: 1.25rem;
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <h2>What is this class about?</h2>
+      This is a hands-on class about all kinds of electronic soldering - surface mount and through hole soldering will be covered, including tips for tricky leadless components like QFNs. A brief lecture will be followed by a demonstration and then you will build your own open source programmable macropad to take home!
+    </section>
+
+    <section>
+      <h2>What will I learn?</h2>
+    Take this class if you want to learn how to solder surface mount components, or if you just want a refresher. We will also cover through hole soldering. There will be plenty of time to ask questions and to practice!
+      <img src="board-assembly.jpg" width="2000" height="1506" alt="Green macropad circuit board on a metal plate, with an RP2040 chip, USB-C connector and small surface mount parts soldered in the top corner">
+    </section>
+
+    <section>
+      <h2>What will I make?</h2>
+    Not only will you get to practice soldering, you will also make an RGB backlit macropad with a dial and a screen!
+      <img src="finished-macropad.jpg" width="1500" height="1992" alt="Hand holding a finished macropad plugged in over USB-C, with twelve keys lit blue, green and purple and a rotary dial in the top corner">
+    </section>
+
+    <section>
+      <h2>When is it?</h2>
+    The first edition of this class will be held Wednesday, November 18, 2026 at Cambridge Hackspace. We will get started at 6:00PM! I'll be available until 9, and members are welcome to continue working after that.
+    </section>
+
+    <section>
+      <h2>Class size</h2>
+    I'm capping the class size at 6-7 people for this first run. That should be a small enough class that I can look at everyone's boards individually.
+    </section>
+
+    <section>
+      <h2>How can I sign up? How much does it cost?</h2>
+    Right now I'm running this as a members-only or friends-of-members class, at a reduced cost since this is a prototype/first run of the class. The cost is $75. <a href="https://forms.gle/uuQu6E4CcsVxupdm7">Sign up here</a>. I'll reach out and arrange payment (cash or venmo) via your contact information.
+    </section>
+
+    <section>
+      <h2>Why is it priced this way? Where does the money go?</h2>
+    I've spent many hours and a couple hundred bucks in prototypes for this class in order to bootstrap it - the first cash in will go to covering those costs. After that, the money will be divided between me and the space. I'll try to cover my membership for the month and use the balance on new tools or parts so we can run this class again!
+    </section>
+
+    <section>
+      <h2>Cancellation Policy</h2>
+    Unfortunately, it's really hard for me to accept cancellations or do makeup classes - I'm just one person. If you can't make it, I will leave all your parts at the hackspace in a ziploc for you for a month. If they are not picked up, they will be used for a future class.
+    </section>
+
+    <section>
+      <h2>Class materials</h2>
+    If you want to see any of the class materials, they are all right here including the SMD assembly cue sheet, BOM, board files, etc.
+      <ul>
+        <li><a href="https://drive.google.com/file/d/1vsFyOY6Tz-BJn-4Hyup6xKx2SzKO1Jl8/view?usp=sharing">HTML soldering guide</a></li>
+        <li><a href="https://drive.google.com/file/d/1UrxEE7tUSxONztT-BWAL-vFZpoRQnALL/view?usp=drive_link">PDF soldering guide</a></li>
+        <li><a href="https://docs.google.com/presentation/d/1k0pjAyWxFBQI-IeTyHwWEjgCcWQW36Y1NDuzNbooNOY/edit?usp=drive_link">Class slides</a></li>
+        <li><a href="https://github.com/Aylo6061/2040-pcb-assy-class/tree/main/firmware/qmk/2040pad">Firmware</a></li>
+        <li><a href="https://github.com/Aylo6061/2040-pcb-assy-class/tree/main/2040pad">Board and BOM (KiCad files)</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

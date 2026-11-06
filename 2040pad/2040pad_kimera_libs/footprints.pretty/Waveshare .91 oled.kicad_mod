@@ -1,0 +1,125 @@
+(footprint "Waveshare .91 oled"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -10.6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "13b7c737-8457-4b13-91b8-747e1025b8e2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Waveshare .91 oled"
+		(at 0 -9.1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "4584ff62-e558-4951-8a89-0304b41c1f9c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "85d84285-02c0-4eb3-9662-d4284140a3b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a42767bb-13f8-4a56-8b2d-2feb65105436")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -1.27 -2.44)
+		(end 34.73 10.06)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "2b2b9817-97ae-4200-89a4-57e59cba5b3d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -7.6 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "f1e77b32-ea5e-48d4-844d-da173134a77c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "be5c0491-9ae3-4701-8b1a-0ebc2543af5a")
+	)
+	(pad "2" thru_hole circle
+		(at 0 2.54)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "fb997dde-372b-404c-9eee-91d10e409d47")
+	)
+	(pad "3" thru_hole circle
+		(at 0 5.08)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "01797f65-0564-4de5-a5f1-95f92d68a56c")
+	)
+	(pad "4" thru_hole circle
+		(at 0 7.62)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c13688c3-04ef-46e1-a9c7-5eff17945b25")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/2040pad_kimera_libs/3dmodels.3dshapes/OLED 128 x 32 Display Assembly.step"
+		(offset
+			(xyz 17.75 -4 4)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)
