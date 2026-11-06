@@ -87,3 +87,9 @@ eagle.epf
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Case design, not ready to publish yet
+mechanical/
+
+# Placewise project files
+*.placewise

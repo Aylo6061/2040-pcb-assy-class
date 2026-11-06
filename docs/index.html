@@ -3,29 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex"><!-- Remove when going public -->
+  <meta name="robots" content="noindex"><!-- Remove to let search engines list this page -->
   <title>PCB Soldering Class</title>
   <style>
     :root {
       color-scheme: light dark;
       --bg: #f7f5ef;
       --text: #1d2420;
-      --muted: #56615b;
       --line: #d5d3c8;
       --accent: #0b6b3f;
-      --accent-text: #ffffff;
-      --error: #a32a1f;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #121714;
         --text: #eaeee9;
-        --muted: #a3aea7;
         --line: #303833;
         --accent: #58c48c;
-        --accent-text: #0c1410;
-        --error: #ff9c8f;
       }
     }
 
@@ -69,59 +63,10 @@
       height: auto;
       border-radius: 6px;
     }
-
-    /* Secret code gate: remove when going public */
-    #gate {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      width: min(100% - 2rem, 22rem);
-      margin: 22vh auto 0;
-    }
-
-    #gate label { font-weight: 600; }
-
-    #gate input,
-    #gate button {
-      min-height: 2.75rem;
-      padding: 0 0.8rem;
-      border-radius: 6px;
-      font: inherit;
-    }
-
-    #gate input {
-      border: 1px solid var(--muted);
-      background: transparent;
-      color: inherit;
-    }
-
-    #gate button {
-      border: 0;
-      background: var(--accent);
-      color: var(--accent-text);
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    #gate-error {
-      margin: 0;
-      color: var(--error);
-    }
-
-    [hidden] { display: none !important; }
   </style>
 </head>
 <body>
-  <!-- Secret code gate: remove this form when going public -->
-  <form id="gate" hidden>
-    <label for="gate-code">Enter the secret code</label>
-    <input id="gate-code" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" required>
-    <button type="submit">Continue</button>
-    <p id="gate-error" role="alert" hidden>That code isn't right. Try again.</p>
-  </form>
-
-  <!-- When going public, also remove "hidden" from this main tag -->
-  <main id="page" hidden>
+  <main>
     <section>
       <h2>What is this class about?</h2>
       This is a hands-on class about all kinds of electronic soldering - surface mount and through hole soldering will be covered, including tips for tricky leadless components like QFNs. A brief lecture will be followed by a demonstration and then you will build your own open source programmable macropad to take home!
@@ -179,54 +124,5 @@
       </ul>
     </section>
   </main>
-
-  <!-- Secret code gate: remove this script when going public -->
-  <script>
-    const SECRET_CODE = "solder"; // Lowercase; entries ignore capitalization and extra spaces
-
-    const gate = document.getElementById("gate");
-    const page = document.getElementById("page");
-    const input = document.getElementById("gate-code");
-    const error = document.getElementById("gate-error");
-
-    function reveal() {
-      gate.hidden = true;
-      page.hidden = false;
-    }
-
-    // Browsers can block storage; the code then has to be entered on each visit
-    function readUnlocked() {
-      try {
-        return sessionStorage.getItem("unlocked") === "yes";
-      } catch {
-        return false;
-      }
-    }
-
-    function saveUnlocked() {
-      try {
-        sessionStorage.setItem("unlocked", "yes");
-      } catch {}
-    }
-
-    if (readUnlocked()) {
-      reveal();
-    } else {
-      gate.hidden = false;
-      input.focus();
-    }
-
-    gate.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (input.value.trim().toLowerCase() === SECRET_CODE) {
-        saveUnlocked();
-        reveal();
-      } else {
-        error.hidden = false;
-        input.select();
-      }
-    });
-  </script>
 </body>
 </html>

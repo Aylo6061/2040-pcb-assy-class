@@ -1,0 +1,95 @@
+{
+    "keyboard_name": "2040pad",
+    "manufacturer": "aylo6061",
+    "maintainer": "aylo6061",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "usb": {
+        "vid": "0xFEED",
+        "pid": "0x2040",
+        "device_version": "0.0.1"
+    },
+    "features": {
+        "bootmagic": true,
+        "mousekey": false,
+        "extrakey": true,
+        "nkro": true,
+        "encoder": true,
+        "rgb_matrix": true,
+        "oled": true
+    },
+    "bootmagic": {
+        "matrix": [1, 0]
+    },
+    "encoder": {
+        "rotary": [
+            {"pin_a": "GP17", "pin_b": "GP18", "resolution": 4}
+        ]
+    },
+    "ws2812": {
+        "pin": "GP19",
+        "driver": "vendor"
+    },
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "max_brightness": 120,
+        "sleep": true,
+        "animations": {
+            "breathing": true,
+            "cycle_all": true,
+            "cycle_left_right": true,
+            "cycle_up_down": true,
+            "rainbow_moving_chevron": true,
+            "cycle_spiral": true,
+            "raindrops": true,
+            "hue_wave": true,
+            "pixel_rain": true,
+            "typing_heatmap": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true,
+            "splash": true
+        },
+        "layout": [
+            {"matrix": [1, 0], "x": 0, "y": 0, "flags": 4},
+            {"matrix": [1, 1], "x": 112, "y": 0, "flags": 4},
+            {"matrix": [1, 2], "x": 224, "y": 0, "flags": 4},
+            {"matrix": [2, 0], "x": 0, "y": 21, "flags": 4},
+            {"matrix": [2, 1], "x": 112, "y": 21, "flags": 4},
+            {"matrix": [2, 2], "x": 224, "y": 21, "flags": 4},
+            {"matrix": [3, 0], "x": 0, "y": 42, "flags": 4},
+            {"matrix": [3, 1], "x": 112, "y": 42, "flags": 4},
+            {"matrix": [3, 2], "x": 224, "y": 42, "flags": 4},
+            {"matrix": [4, 0], "x": 0, "y": 64, "flags": 4},
+            {"matrix": [4, 1], "x": 112, "y": 64, "flags": 4},
+            {"matrix": [4, 2], "x": 224, "y": 64, "flags": 4}
+        ]
+    },
+    "matrix_pins": {
+        "direct": [
+            [null, null, "GP0"],
+            ["GP1", "GP2", "GP3"],
+            ["GP4", "GP5", "GP6"],
+            ["GP7", "GP8", "GP9"],
+            ["GP10", "GP11", "GP12"]
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"x": 2, "y": 0, "matrix": [0, 2]},
+                {"x": 0, "y": 1, "matrix": [1, 0]},
+                {"x": 1, "y": 1, "matrix": [1, 1]},
+                {"x": 2, "y": 1, "matrix": [1, 2]},
+                {"x": 0, "y": 2, "matrix": [2, 0]},
+                {"x": 1, "y": 2, "matrix": [2, 1]},
+                {"x": 2, "y": 2, "matrix": [2, 2]},
+                {"x": 0, "y": 3, "matrix": [3, 0]},
+                {"x": 1, "y": 3, "matrix": [3, 1]},
+                {"x": 2, "y": 3, "matrix": [3, 2]},
+                {"x": 0, "y": 4, "matrix": [4, 0]},
+                {"x": 1, "y": 4, "matrix": [4, 1]},
+                {"x": 2, "y": 4, "matrix": [4, 2]}
+            ]
+        }
+    }
+}
