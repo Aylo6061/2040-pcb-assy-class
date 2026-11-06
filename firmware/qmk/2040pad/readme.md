@@ -2,7 +2,7 @@
 
 QMK keyboard definition for the 2040pad: 12 choc keys, a PEC11R encoder with push switch, 12 SK6812MINI-E LEDs and a 128x32 SSD1306 OLED.
 
-**Status: compiles against QMK `f5db962110` (2026-10-29). On the first board (2026-11-05), the keys and encoder work. The encoder pins were then swapped to reverse the volume direction, and that build still needs checking on the board.**
+**Status: compiles against QMK `f5db962110` (2026-10-29). Tested on the first board (2026-11-05): the keys and encoder work, including the swapped encoder pins that reverse the volume direction.**
 
 ## Pins
 
