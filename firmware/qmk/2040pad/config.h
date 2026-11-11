@@ -13,6 +13,11 @@
 
 #define OLED_DISPLAY_128X32
 
+/* LED positions in keyboard.json use physical spacing, about 62 units per key.
+ * QMK's default heatmap spread of 40 assumes about 16 units per key, so scale it
+ * up to keep warming the neighboring keys. */
+#define RGB_MATRIX_TYPING_HEATMAP_SPREAD 132
+
 /* Double-tap the reset button (SW1) to enter the UF2 bootloader. */
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U

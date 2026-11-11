@@ -1,0 +1,69 @@
+{
+  "name": "2040pad",
+  "vendorId": "0xFEED",
+  "productId": "0x2040",
+  "matrix": {"rows": 5, "cols": 3},
+  "keycodes": ["qmk_rgb_matrix_keycodes"],
+  "menus": [
+    {
+      "label": "Lighting",
+      "content": [
+        {
+          "label": "Backlight",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_brightness", 3, 1]
+            },
+            {
+              "label": "Effect",
+              "type": "dropdown",
+              "options": [
+                ["All Off", 0],
+                ["Solid Color", 1],
+                ["Breathing", 2],
+                ["Cycle All", 3],
+                ["Cycle Left/Right", 4],
+                ["Cycle Up/Down", 5],
+                ["Rainbow Moving Chevron", 6],
+                ["Cycle Spiral", 7],
+                ["Raindrops", 8],
+                ["Hue Wave", 9],
+                ["Pixel Rain", 10],
+                ["Typing Heatmap", 11],
+                ["Solid Reactive Simple", 12],
+                ["Solid Reactive", 13],
+                ["Splash", 14]
+              ],
+              "content": ["id_qmk_rgb_matrix_effect", 3, 2]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0",
+              "label": "Effect Speed",
+              "type": "range",
+              "options": [0, 255],
+              "content": ["id_qmk_rgb_matrix_effect_speed", 3, 3]
+            },
+            {
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0",
+              "label": "Color",
+              "type": "color",
+              "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": {
+    "keymap": [
+      [{"x": 2}, "0,2\n\n\n\n\n\n\n\n\ne0"],
+      ["1,0", "1,1", "1,2"],
+      ["2,0", "2,1", "2,2"],
+      ["3,0", "3,1", "3,2"],
+      ["4,0", "4,1", "4,2"]
+    ]
+  }
+}

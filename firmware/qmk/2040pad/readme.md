@@ -47,9 +47,37 @@ Enter the bootloader, then copy `2040pad_default.uf2` to the `RPI-RP2` drive tha
 
 `R7` (10k) sits in series between the RP2040's `QSPI_SS` and the flash chip's `nCS`. Adafruit's design connects these directly and uses its 10k as a pull-up to 3.3V instead. The first board boots from flash with `R7` fitted, so it doesn't prevent booting, but this differs from the reference design and timing margin hasn't been measured.
 
+## Changing the keymap with VIA
+
+The `via` keymap stores the keymap in flash, so you can change it from [usevia.app](https://usevia.app) without reflashing. The board keeps working normally while you edit.
+
+1. Build it with `qmk compile -kb 2040pad -km via`, or use the prebuilt `firmware/qmk/2040pad_via.uf2`, and flash it.
+2. Open [usevia.app](https://usevia.app) in Chrome or Edge.
+3. In Settings, turn on **Show Design tab**.
+4. In the Design tab, load `firmware/qmk/2040pad_via.json`. Your board isn't in VIA's built-in list, so each browser needs this once.
+5. In the Configure tab, authorize the 2040pad. You can then edit 4 layers of keys, encoder actions, macros and lighting.
+
+As an alternative to the VIA website, `firmware/tools/padmap.py` is a small Python app that does the same keymap editing. See `firmware/tools/README.md`.
+
+**Notes:**
+- The keymap in `keymaps/via/keymap.c` is only the starting point. VIA saves its own copy to flash.
+- VIA's built-in lighting menu assumes every effect is compiled in, so `2040pad_via.json` lists this board's 14 effects. If you change the animations in `keyboard.json`, the build fails until you update both that file and the checks in `keymaps/via/keymap.c`.
+- OLED text is set in firmware, so VIA can't change it.
+- To reset VIA's changes, hold the top-left key while plugging in. This erases the saved settings and enters the bootloader.
+
 ## Status LED
 
 `D2` blinks once per second while the firmware's main loop is running. It may be dim because `R14` is 5.1k. If it stops during normal use, the firmware has hung. It may also stop while the PC is asleep.
+
+## LED positions
+
+The LED positions in `keyboard.json` use the real key spacing (18.0 mm columns, 17.1 mm rows), scaled so the farthest pair of keys is 224 units apart, with the center at (64, 92). QMK's usual formula stretches every board to 224 × 64, which made effects like Splash spread about 5× faster vertically than horizontally on this tall board.
+
+- **Splash, Spiral, Chevron and Up/Down:** spread evenly in both directions.
+- **Typing Heatmap:** its spread is raised to 132 in `config.h`, so pressing a key still warms its neighbors.
+- **Limit:** keep any two LEDs less than 256 units apart, because some effects store distances in one byte.
+
+`qmk lint` reports that a `via` keymap shouldn't exist. That's QMK's policy for its own repository and doesn't affect building.
 
 ## Check on first power-up
 

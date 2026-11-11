@@ -51,8 +51,8 @@ bool oled_task_user(void) {
 
     oled_write_P(PSTR("RGB: "), false);
     if (rgb_matrix_is_enabled()) {
-        oled_write_P(PSTR("mode "), false);
-        oled_write_ln(get_u8_str(rgb_matrix_get_mode(), ' '), false);
+        const char *name = rgb_matrix_effect_name(rgb_matrix_get_mode());
+        oled_write_ln(name ? name : get_u8_str(rgb_matrix_get_mode(), ' '), false);
     } else {
         oled_write_ln_P(PSTR("off"), false);
     }

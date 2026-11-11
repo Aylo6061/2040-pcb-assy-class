@@ -34,6 +34,7 @@
         "driver": "ws2812",
         "max_brightness": 120,
         "sleep": true,
+        "center_point": [64, 92],
         "animations": {
             "breathing": true,
             "cycle_all": true,
@@ -51,17 +52,17 @@
         },
         "layout": [
             {"matrix": [1, 0], "x": 0, "y": 0, "flags": 4},
-            {"matrix": [1, 1], "x": 112, "y": 0, "flags": 4},
-            {"matrix": [1, 2], "x": 224, "y": 0, "flags": 4},
-            {"matrix": [2, 0], "x": 0, "y": 21, "flags": 4},
-            {"matrix": [2, 1], "x": 112, "y": 21, "flags": 4},
-            {"matrix": [2, 2], "x": 224, "y": 21, "flags": 4},
-            {"matrix": [3, 0], "x": 0, "y": 42, "flags": 4},
-            {"matrix": [3, 1], "x": 112, "y": 42, "flags": 4},
-            {"matrix": [3, 2], "x": 224, "y": 42, "flags": 4},
-            {"matrix": [4, 0], "x": 0, "y": 64, "flags": 4},
-            {"matrix": [4, 1], "x": 112, "y": 64, "flags": 4},
-            {"matrix": [4, 2], "x": 224, "y": 64, "flags": 4}
+            {"matrix": [1, 1], "x": 64, "y": 0, "flags": 4},
+            {"matrix": [1, 2], "x": 129, "y": 0, "flags": 4},
+            {"matrix": [2, 0], "x": 0, "y": 61, "flags": 4},
+            {"matrix": [2, 1], "x": 64, "y": 61, "flags": 4},
+            {"matrix": [2, 2], "x": 129, "y": 61, "flags": 4},
+            {"matrix": [3, 0], "x": 0, "y": 122, "flags": 4},
+            {"matrix": [3, 1], "x": 64, "y": 122, "flags": 4},
+            {"matrix": [3, 2], "x": 129, "y": 122, "flags": 4},
+            {"matrix": [4, 0], "x": 0, "y": 183, "flags": 4},
+            {"matrix": [4, 1], "x": 64, "y": 183, "flags": 4},
+            {"matrix": [4, 2], "x": 129, "y": 183, "flags": 4}
         ]
     },
     "matrix_pins": {
