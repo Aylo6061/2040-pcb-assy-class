@@ -721,7 +721,7 @@
     (uuid "33d37386-b1e2-4dfe-917a-225854f0af54")
   )
   (wire
-    (pts (xy 163.83 123.19) (xy 163.83 143.51))
+    (pts (xy 163.83 123.19) (xy 163.83 148.59))
     (stroke (width 0) (type default))
     (uuid "34a46469-7d26-4cd2-9374-9e3eb59b7fca")
   )
@@ -761,6 +761,11 @@
     (uuid "57528f8b-c66a-4cdb-9db6-88433dfd811c")
   )
   (wire
+    (pts (xy 163.83 148.59) (xy 175.26 148.59))
+    (stroke (width 0) (type default))
+    (uuid "5d551ddc-1965-4b26-8d1a-2594025ef7ae")
+  )
+  (wire
     (pts (xy 129.54 74.93) (xy 162.56 74.93))
     (stroke (width 0) (type default))
     (uuid "6a352612-444c-49b7-8c07-26588c275eaa")
@@ -786,19 +791,14 @@
     (uuid "80b3a515-98e7-47ed-9b22-805c53f3198e")
   )
   (wire
-    (pts (xy 167.64 148.59) (xy 175.26 148.59))
+    (pts (xy 167.64 146.05) (xy 175.26 146.05))
     (stroke (width 0) (type default))
-    (uuid "8a5462e6-d79a-49a3-bd6b-be5ae5226d9b")
+    (uuid "970508d3-f339-4e75-9165-c8c01d071ee5")
   )
   (wire
     (pts (xy 163.83 119.38) (xy 163.83 123.19))
     (stroke (width 0) (type default))
     (uuid "99864d78-b04f-424b-bce5-2410a064011c")
-  )
-  (wire
-    (pts (xy 163.83 143.51) (xy 175.26 143.51))
-    (stroke (width 0) (type default))
-    (uuid "999402c3-aa3e-4006-9155-cd1c94afda91")
   )
   (wire
     (pts (xy 129.54 115.57) (xy 143.51 115.57))
@@ -836,6 +836,11 @@
     (uuid "d3055ef7-b8a2-42ef-bb71-6ab9674decb9")
   )
   (wire
+    (pts (xy 167.64 143.51) (xy 175.26 143.51))
+    (stroke (width 0) (type default))
+    (uuid "d963235d-0776-4788-b28e-d7e79e870aed")
+  )
+  (wire
     (pts (xy 129.54 91.44) (xy 162.56 91.44))
     (stroke (width 0) (type default))
     (uuid "d9828563-b62d-4aea-91a1-d56af45849ec")
@@ -863,18 +868,6 @@
   )
   (label
     "SCL"
-    (at 167.64 151.13 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid "33f9c868-e314-40c9-8322-b89587a27809")
-  )
-  (label
-    "SDA"
-    (at 167.64 148.59 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid "4c296a19-8506-457c-8a2a-ba4dc879b7ba")
-  )
-  (label
-    "SCL"
     (at 170.18 128.27 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid "7009eaf3-a095-45ed-8711-28a8f23d6350")
@@ -887,9 +880,21 @@
   )
   (label
     "SCL"
+    (at 167.64 146.05 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid "97ed76f0-5e04-4f86-9bbf-fe0c29bf0df7")
+  )
+  (label
+    "SCL"
     (at 152.4 118.11 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid "ae61ed70-c6ad-45ac-9b49-a21783b3524f")
+  )
+  (label
+    "SDA"
+    (at 167.64 143.51 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid "b12c5608-9f27-4771-a536-3a4bcf902458")
   )
   (symbol
     (lib_id "Device:R")
@@ -973,6 +978,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "RMCF0603JT5K10"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Stackpole Electronics Inc"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "RMCF0603JT5K10CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "37e25341-af07-4762-be6b-a256bbf807c3"))
     (pin "1" (uuid "3697dcf2-1654-4ca1-9d15-6b292fd80f7c"))
     (instances
@@ -980,36 +1030,6 @@
         "2040pad"
         (path "/9cd1a3b7-4f4b-4eaf-8838-cd313dd43744" (reference "R9") (unit 1))
       )
-    )
-    (property
-      "MPN"
-      "RMCF0603JT5K10"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Stackpole Electronics Inc"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "RMCF0603JT5K10CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -1180,7 +1200,7 @@
     (property
       "Reference"
       "J2"
-      (at 189.23 127.0 0)
+      (at 189.23 127 0)
       (show_name no)
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1265,6 +1285,42 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "SM04B-SRSS-TB"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "JST Sales America Inc."
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "455-SM04B-SRSS-TBCT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "6e0e77bd-b283-4c63-9032-2acd5777656b"))
     (pin "3" (uuid "69ae0d35-b378-4e50-a10d-c4af39811b32"))
     (pin "4" (uuid "532078c5-7040-4579-8df0-417adcc076c7"))
@@ -1276,30 +1332,6 @@
         "2040pad"
         (path "/9cd1a3b7-4f4b-4eaf-8838-cd313dd43744" (reference "J2") (unit 1))
       )
-    )
-    (property
-      "MPN"
-      "SM04B-SRSS-TB"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "JST Sales America Inc."
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "455-SM04B-SRSS-TBCT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -1397,7 +1429,7 @@
     (unit 1)
     (body_style 1)
     (exclude_from_sim no)
-    (in_bom yes)
+    (in_bom no)
     (on_board yes)
     (in_pos_files yes)
     (dnp no)
@@ -1639,7 +1671,7 @@
   )
   (symbol
     (lib_id "power:GND")
-    (at 175.26 146.05 270)
+    (at 167.64 151.13 270)
     (unit 1)
     (body_style 1)
     (exclude_from_sim no)
@@ -1652,7 +1684,7 @@
     (property
       "Reference"
       "#PWR034"
-      (at 168.91 146.05 0)
+      (at 161.29 151.13 0)
       (hide yes)
       (show_name no)
       (do_not_autoplace no)
@@ -1661,7 +1693,7 @@
     (property
       "Value"
       "GND"
-      (at 171.45 146.05 90)
+      (at 163.83 151.13 90)
       (show_name no)
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)) (justify right))
@@ -1669,7 +1701,7 @@
     (property
       "Footprint"
       ""
-      (at 175.26 146.05 0)
+      (at 167.64 151.13 0)
       (hide yes)
       (show_name no)
       (do_not_autoplace no)
@@ -1678,7 +1710,7 @@
     (property
       "Datasheet"
       ""
-      (at 175.26 146.05 0)
+      (at 167.64 151.13 0)
       (hide yes)
       (show_name no)
       (do_not_autoplace no)
@@ -1687,7 +1719,7 @@
     (property
       "Description"
       "Power symbol creates a global label with name \"GND\" , ground"
-      (at 175.26 146.05 0)
+      (at 167.64 151.13 0)
       (hide yes)
       (show_name no)
       (do_not_autoplace no)
@@ -1783,6 +1815,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "RMCF0603JT5K10"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Stackpole Electronics Inc"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "RMCF0603JT5K10CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "7df1a4a4-ea27-4aee-bf09-110f34bc6c5b"))
     (pin "1" (uuid "2716b1b9-9ab4-4d30-8564-a1d860cc1d30"))
     (instances
@@ -1790,36 +1867,6 @@
         "2040pad"
         (path "/9cd1a3b7-4f4b-4eaf-8838-cd313dd43744" (reference "R10") (unit 1))
       )
-    )
-    (property
-      "MPN"
-      "RMCF0603JT5K10"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Stackpole Electronics Inc"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "RMCF0603JT5K10CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol

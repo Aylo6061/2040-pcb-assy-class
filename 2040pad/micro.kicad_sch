@@ -2702,11 +2702,6 @@
     (uuid "511da246-64d2-469d-95c4-f05a16767e2d")
   )
   (wire
-    (pts (xy 173.99 140.97) (xy 177.8 140.97))
-    (stroke (width 0) (type default))
-    (uuid "54b945f6-410b-4bff-9c18-d6b71b36fae2")
-  )
-  (wire
     (pts (xy 59.69 82.55) (xy 50.8 82.55))
     (stroke (width 0) (type default))
     (uuid "54fe27bf-1de5-47bb-a6fd-cdd543e293e7")
@@ -2792,7 +2787,7 @@
     (uuid "6bb24b7c-29e2-4a70-8b93-0e7df36383b4")
   )
   (wire
-    (pts (xy 157.48 140.97) (xy 166.37 140.97))
+    (pts (xy 157.48 140.97) (xy 177.8 140.97))
     (stroke (width 0) (type default))
     (uuid "6d4a6f4a-ffcd-460a-b0ce-c49dec9bd8f1")
   )
@@ -3650,6 +3645,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "GRM21BR71A106KA73K"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Murata Electronics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "490-14381-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0805"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "11f366c5-15b2-4c5c-b509-390f1c4b0015"))
     (pin "2" (uuid "673baa62-7f31-459a-bc28-7ad345360418"))
     (instances
@@ -3661,36 +3701,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "GRM21BR71A106KA73K"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Murata Electronics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "490-14381-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0805"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -3775,6 +3785,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "RMCF0603JT5K10"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Stackpole Electronics Inc"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "RMCF0603JT5K10CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "3e0fb85d-875e-431f-93a0-628cac8be59d"))
     (pin "1" (uuid "8e25d5e1-b040-4b90-badc-135ac1fd3fe4"))
     (instances
@@ -3786,36 +3841,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "RMCF0603JT5K10"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Stackpole Electronics Inc"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "RMCF0603JT5K10CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -4038,6 +4063,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "SC0914(13)"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Raspberry Pi"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "2648-SC0914(13)CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "56-QFN (7x7)"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "11" (uuid "cce91846-327e-4e52-bf88-da75db0dc842"))
     (pin "3" (uuid "b09861eb-ba27-4f1e-accf-55204e7aa016"))
     (pin "5" (uuid "aa226c41-8338-4b81-bef9-463b488398a1"))
@@ -4104,36 +4174,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "SC0914(13)"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Raspberry Pi"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "2648-SC0914(13)CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "56-QFN (7x7)"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -4217,6 +4257,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "W25Q64JVSSIM TR"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Winbond Electronics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "256-W25Q64JVSSIMTRCT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "8-SOIC"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "5" (uuid "778cb2e7-ee3c-4d1f-bf2f-a51576d80546"))
     (pin "2" (uuid "d0c27068-022a-4a23-ba17-aa20a6da4aec"))
     (pin "3" (uuid "305bf455-a149-4696-b4d1-2d9bb97f5988"))
@@ -4234,36 +4319,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "W25Q64JVSSIM TR"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Winbond Electronics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "256-W25Q64JVSSIMTRCT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "8-SOIC"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -4620,6 +4675,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CL21B105KAFNNNE"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Samsung Electro-Mechanics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "Storematic"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1276-1066-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0805"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "85dff36d-615d-4f3b-ad1c-c25503263fbf"))
     (pin "2" (uuid "eb2dfd87-7c48-4d65-8655-bd4b73843e7d"))
     (instances
@@ -4631,36 +4731,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CL21B105KAFNNNE"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Samsung Electro-Mechanics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "Storematic"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1276-1066-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0805"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -4745,6 +4815,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "1N4148WS"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Diotec Semiconductor"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "4878-1N4148WSCT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "SOD-323F"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "662530f6-f3f7-485c-8fd7-18ea31bde96f"))
     (pin "1" (uuid "556dcd63-92d5-44a2-a855-caffbd2cd70d"))
     (instances
@@ -4756,36 +4871,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "1N4148WS"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Diotec Semiconductor"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "4878-1N4148WSCT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "SOD-323F"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -5006,6 +5091,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "RMCF0603FG1K00"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Stackpole Electronics Inc"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "RMCF0603FG1K00CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "850a2a37-1f28-497b-9769-4a1c83d21e4f"))
     (pin "1" (uuid "f6f397bf-f384-4ffe-880d-a1d4f22d0114"))
     (instances
@@ -5017,36 +5147,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "RMCF0603FG1K00"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Stackpole Electronics Inc"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "RMCF0603FG1K00CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -5199,6 +5299,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CL21B105KAFNNNE"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Samsung Electro-Mechanics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "Storematic"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1276-1066-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0805"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "a50f54e5-40c5-4236-b123-452979f1aeba"))
     (pin "2" (uuid "06032028-725b-44f6-b84f-cbb5259400d9"))
     (instances
@@ -5210,36 +5355,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CL21B105KAFNNNE"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Samsung Electro-Mechanics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "Storematic"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1276-1066-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0805"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -5564,6 +5679,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "WR06X220 JTL"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Walsin Technology Corporation"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1292-WR06X220JTLCT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "549a6804-1add-4025-8a53-ad197c884245"))
     (pin "1" (uuid "5289282d-3d99-4722-af0f-cc2e41fece30"))
     (instances
@@ -5575,36 +5735,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "WR06X220 JTL"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Walsin Technology Corporation"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1292-WR06X220JTLCT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -5825,6 +5955,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CL21B105KAFNNNE"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Samsung Electro-Mechanics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "Storematic"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1276-1066-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0805"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "0249a276-a59e-4120-b40d-476e9631fb4c"))
     (pin "2" (uuid "1704d6d0-9ef5-47d1-a555-4fbcf6cb2c37"))
     (instances
@@ -5836,36 +6011,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CL21B105KAFNNNE"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Samsung Electro-Mechanics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "Storematic"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1276-1066-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0805"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -6062,6 +6207,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CX3225GB12000H0KPSC1"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "KYOCERA AVX"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "478-CX3225GB12000H0KPSC1CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "4-SMD (3.2x2.5)"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "3" (uuid "8b4dc77f-5fb3-4bac-90f4-a53d5bbf914d"))
     (pin "1" (uuid "f9881823-1b41-4d8d-aead-3d83d467f194"))
     (pin "2" (uuid "4457c3e0-74d0-4503-a871-5ef0e24cdfff"))
@@ -6075,36 +6265,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CX3225GB12000H0KPSC1"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "KYOCERA AVX"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "478-CX3225GB12000H0KPSC1CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "4-SMD (3.2x2.5)"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -6393,6 +6553,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "AP2112K-3.3TRG1"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Diodes Incorporated"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "AP2112K-3.3TRG1DICT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "SOT-25"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "4" (uuid "3b9bad4c-84e6-4651-b1e9-f0da6604bdd6"))
     (pin "5" (uuid "ae6d5e03-9ba3-45f8-bc12-e738c41fb647"))
     (pin "2" (uuid "9df4fd53-f365-44b2-a831-7ea8ff860052"))
@@ -6407,36 +6612,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "AP2112K-3.3TRG1"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Diodes Incorporated"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "AP2112K-3.3TRG1DICT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "SOT-25"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -6521,6 +6696,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "RMCF0603JT5K10"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Stackpole Electronics Inc"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "RMCF0603JT5K10CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "76639640-6062-4a75-8d6a-7ca1d43f8835"))
     (pin "1" (uuid "453aceb5-b1a7-42a8-9275-22fbd3bec64a"))
     (instances
@@ -6532,36 +6752,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "RMCF0603JT5K10"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Stackpole Electronics Inc"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "RMCF0603JT5K10CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -6646,6 +6836,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CL21B105KAFNNNE"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Samsung Electro-Mechanics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "Storematic"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1276-1066-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0805"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "45e72d95-14e6-44ec-9cf3-5d6816a9aaf6"))
     (pin "2" (uuid "c4322b00-2705-4b2f-ad27-45cc2fbb62d3"))
     (instances
@@ -6657,36 +6892,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CL21B105KAFNNNE"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Samsung Electro-Mechanics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "Storematic"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1276-1066-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0805"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -6839,6 +7044,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CL21B105KAFNNNE"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Samsung Electro-Mechanics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "Storematic"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1276-1066-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0805"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "f8c86bbf-1f60-4bb7-b3f2-7a1dd7abf0aa"))
     (pin "2" (uuid "73c04991-50ae-4003-b2e6-4ebe32f64a2d"))
     (instances
@@ -6850,161 +7100,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CL21B105KAFNNNE"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Samsung Electro-Mechanics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "Storematic"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1276-1066-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0805"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-  )
-  (symbol
-    (lib_id "Device:R")
-    (at 170.18 140.97 90)
-    (unit 1)
-    (body_style 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (in_pos_files yes)
-    (dnp no)
-    (fields_autoplaced yes)
-    (uuid "943b7cf3-5153-4940-99e8-d1b78ba32e9e")
-    (property
-      "Reference"
-      "R7"
-      (at 170.18 134.62 90)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property
-      "Value"
-      "10k"
-      (at 170.18 137.16 90)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property
-      "Footprint"
-      "Resistor_SMD:R_0603_1608Metric"
-      (at 170.18 142.748 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property
-      "Datasheet"
-      "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
-      (at 170.18 140.97 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property
-      "Description"
-      "RES 10K OHM 1% 1/10W 0603"
-      (at 170.18 140.97 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property
-      "Sim.Device"
-      ""
-      (at 170.18 140.97 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property
-      "KLC_S4.2_DVDD"
-      ""
-      (at 170.18 140.97 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property
-      "KLC_S4.2_VREG_VOUT"
-      ""
-      (at 170.18 140.97 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects (font (size 1.27 1.27)))
-    )
-    (pin "2" (uuid "c5db6436-e465-4045-ad4d-51b459efc585"))
-    (pin "1" (uuid "a6f49781-a871-4686-a00b-796a19fd192e"))
-    (instances
-      (project
-        "2040pad"
-        (path
-          "/9cd1a3b7-4f4b-4eaf-8838-cd313dd43744/58ccbe52-90d7-4cb5-8c9b-c55a624dcc9f"
-          (reference "R7")
-          (unit 1)
-        )
-      )
-    )
-    (property
-      "MPN"
-      "RC0603FR-1310KL"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "YAGEO"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "Storematic"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "13-RC0603FR-1310KLCT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -7157,6 +7252,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "WR06X220 JTL"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Walsin Technology Corporation"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1292-WR06X220JTLCT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "c5a42c77-648e-44a4-a83e-4778b98709ef"))
     (pin "1" (uuid "a365e10f-4859-4456-ac31-db98de33f5f4"))
     (instances
@@ -7168,36 +7308,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "WR06X220 JTL"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Walsin Technology Corporation"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1292-WR06X220JTLCT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -7318,6 +7428,42 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "UJ20-C-H-G-SMT-1-P16-TR"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      ""
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "Storematic"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "2223-UJ20-C-H-G-SMT-1-P16-TRCT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "A8" (uuid "a97e6c55-f6c7-447c-bce0-3ef37bd2b5a5"))
     (pin "A1_B12" (uuid "b4958c10-d7ea-4d6a-bbe9-6577b0a54cba"))
     (pin "SH1" (uuid "a31db98f-92be-422a-ae74-861e0d5ff328"))
@@ -7343,30 +7489,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "UJ20-C-H-G-SMT-1-P16-TR"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      ""
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "Storematic"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "2223-UJ20-C-H-G-SMT-1-P16-TRCT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -7791,6 +7913,42 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "EVQ-P7J01P"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Panasonic Industry"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "P16767CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "4" (uuid "f1ea5c7f-be8d-4623-bf9d-04497c9be21b"))
     (pin "1" (uuid "945218e9-de7b-4f3d-8ff9-dd3456f1fa38"))
     (pin "2" (uuid "93186761-a00c-4a62-917c-9711a4aeb03d"))
@@ -7804,30 +7962,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "EVQ-P7J01P"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Panasonic Industry"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "P16767CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -7912,6 +8046,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "RMCF0603JT5K10"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Stackpole Electronics Inc"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "RMCF0603JT5K10CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "e1d6ee49-9106-416f-88ca-e22b97489f95"))
     (pin "1" (uuid "2b56a961-a823-4b4d-bbfe-42225d912d03"))
     (instances
@@ -7923,36 +8102,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "RMCF0603JT5K10"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Stackpole Electronics Inc"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "RMCF0603JT5K10CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -8037,6 +8186,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CL21B105KAFNNNE"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Samsung Electro-Mechanics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "Storematic"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1276-1066-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0805"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "39debf31-58c2-4f3a-8b16-c65080866c1a"))
     (pin "2" (uuid "4266651b-1813-48e9-a99a-813c1e0825e3"))
     (instances
@@ -8048,36 +8242,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CL21B105KAFNNNE"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Samsung Electro-Mechanics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "Storematic"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1276-1066-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0805"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -8230,6 +8394,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "RMCF0603FG1K00"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Stackpole Electronics Inc"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "RMCF0603FG1K00CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "5788ba50-b5a3-4f22-8e4d-9fda1cd3c5c6"))
     (pin "1" (uuid "815c41bc-2e24-4ef1-b329-bee50ddf37a9"))
     (instances
@@ -8241,36 +8450,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "RMCF0603FG1K00"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Stackpole Electronics Inc"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "RMCF0603FG1K00CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -8355,6 +8534,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CL10C200JB8NNNC"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Samsung Electro-Mechanics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1276-1187-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "94de4ae9-7221-4338-833a-00ebbe59d29b"))
     (pin "2" (uuid "1c518ea6-1bb1-4c68-a425-7a569f683e70"))
     (instances
@@ -8366,36 +8590,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CL10C200JB8NNNC"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Samsung Electro-Mechanics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1276-1187-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -8684,6 +8878,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "GRM21BR71A106KA73K"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Murata Electronics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "490-14381-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0805"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "3bed8261-58f3-4b08-b740-c7e4f33e0eb9"))
     (pin "2" (uuid "933db8cf-6344-471a-aa7c-edc71ac397ff"))
     (instances
@@ -8695,36 +8934,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "GRM21BR71A106KA73K"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Murata Electronics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "490-14381-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0805"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -8809,6 +9018,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CL10C200JB8NNNC"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Samsung Electro-Mechanics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1276-1187-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "dd698443-4fcd-4e8f-8d41-2e253b181c5d"))
     (pin "2" (uuid "fb76a1f5-92a1-4cb0-85d9-00196ace4441"))
     (instances
@@ -8820,36 +9074,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CL10C200JB8NNNC"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Samsung Electro-Mechanics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1276-1187-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -8934,6 +9158,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "RMCF0603JT5K10"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Stackpole Electronics Inc"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "DigiKey"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "RMCF0603JT5K10CT-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0603"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "2" (uuid "4caad922-d617-44e5-a650-1fde7e95da4f"))
     (pin "1" (uuid "63b201dc-c2e3-4ef8-a4a4-ef7b34336eea"))
     (instances
@@ -8945,36 +9214,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "RMCF0603JT5K10"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Stackpole Electronics Inc"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "DigiKey"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "RMCF0603JT5K10CT-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0603"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
   (symbol
@@ -9195,6 +9434,51 @@
       (do_not_autoplace no)
       (effects (font (size 1.27 1.27)))
     )
+    (property
+      "MPN"
+      "CL21B105KAFNNNE"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Manufacturer"
+      "Samsung Electro-Mechanics"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier"
+      "Storematic"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Supplier_PN"
+      "1276-1066-1-ND"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property
+      "Package"
+      "0805"
+      (at 0 0 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects (font (size 1.27 1.27)))
+    )
     (pin "1" (uuid "a2af0ba6-e4ce-44c3-94b5-b926a94d2a59"))
     (pin "2" (uuid "c10fd263-d7f1-46cc-81c4-d38214be0022"))
     (instances
@@ -9206,36 +9490,6 @@
           (unit 1)
         )
       )
-    )
-    (property
-      "MPN"
-      "CL21B105KAFNNNE"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Manufacturer"
-      "Samsung Electro-Mechanics"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier"
-      "Storematic"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Supplier_PN"
-      "1276-1066-1-ND"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-    (property
-      "Package"
-      "0805"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
     )
   )
 )
