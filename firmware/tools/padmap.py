@@ -4,6 +4,7 @@ Talks to the VIA firmware (2040pad_via.uf2) using VIA's raw HID protocol. Change
 are saved on the pad immediately and survive unplugging.
 
     python padmap.py                       open the window
+    python padmap.py web                   open it in your web browser instead (no tkinter needed)
     python padmap.py info                  show the pad's firmware details
     python padmap.py dump [file.json]      print or save every layer
     python padmap.py load file.json        write a saved keymap to the pad
@@ -348,7 +349,8 @@ tkinter comes from your operating system, not pip. Install it, then recreate the
     macOS with Homebrew:                brew install python-tk@3.X  (3.X = your Python version)
     Windows:                            rerun the python.org installer and select "tcl/tk and IDLE"
 
-The command-line commands work without it. Run: python padmap.py --help"""
+Or skip tkinter and use the browser version: python padmap.py web
+The command-line commands also work without it. Run: python padmap.py --help"""
 
 
 def run_gui():
@@ -550,6 +552,182 @@ def run_gui():
 
 
 # ---------------------------------------------------------------------------
+# Browser page, served from this computer only
+
+
+def run_web(port=0, open_browser=True):
+    """Serve padmap_web.html and a small JSON API on 127.0.0.1 until Ctrl+C."""
+    import http.server
+    import secrets
+    import urllib.parse
+    import webbrowser
+
+    page = Path(__file__).with_name("padmap_web.html").read_text(encoding="utf8")
+    # Every request must carry this token, so other websites open in the
+    # browser can't change the keymap through this server.
+    token = secrets.token_urlsafe(24)
+    session = {"pad": None, "hosts": set()}
+
+    def get_pad():
+        if session["pad"] is None:
+            session["pad"] = Pad()
+        return session["pad"]
+
+    def drop_pad():
+        if session["pad"] is not None:
+            try:
+                session["pad"].close()
+            except OSError:
+                pass
+        session["pad"] = None
+
+    def state(layer):
+        try:
+            p = get_pad()
+            layer = min(max(layer, 0), p.layers - 1)
+            keys = {k: format_keycode(p.get(layer, k)) for k in ALL_KEYS}
+        except (PadError, OSError) as e:
+            drop_pad()
+            return {"connected": False, "error": str(e)}
+        return {"connected": True, "protocol": f"0x{p.protocol:04X}", "layers": p.layers, "layer": layer, "keys": keys}
+
+    def check_key(key):
+        if key not in ALL_KEYS:
+            raise ValueError(f"Unknown key {key!r}")
+        return key
+
+    class Handler(http.server.BaseHTTPRequestHandler):
+        def log_message(self, *_args):
+            pass
+
+        def _reply(self, status, body, content_type="application/json"):
+            data = body.encode("utf8") if isinstance(body, str) else json.dumps(body).encode("utf8")
+            self.send_response(status)
+            self.send_header("Content-Type", content_type + "; charset=utf-8")
+            self.send_header("Content-Length", str(len(data)))
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("X-Content-Type-Options", "nosniff")
+            self.send_header("Referrer-Policy", "no-referrer")
+            if content_type == "text/html":
+                self.send_header(
+                    "Content-Security-Policy",
+                    "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'",
+                )
+            self.end_headers()
+            self.wfile.write(data)
+
+        def _allowed(self, need_token):
+            # The Host check blocks DNS rebinding; the token blocks requests from other sites.
+            if self.headers.get("Host", "") not in session["hosts"]:
+                self._reply(403, {"error": "Requests must come from this computer."})
+                return False
+            if need_token and not secrets.compare_digest(self.headers.get("X-Padmap-Token", ""), token):
+                self._reply(403, {"error": "Missing or wrong token. Reload the page."})
+                return False
+            return True
+
+        def _run(self, action):
+            try:
+                self._reply(200, action())
+            except ValueError as e:
+                self._reply(400, {"error": str(e)})
+            except (PadError, OSError) as e:
+                drop_pad()
+                self._reply(503, {"error": str(e)})
+
+        def do_GET(self):
+            url = urllib.parse.urlsplit(self.path)
+            query = urllib.parse.parse_qs(url.query)
+            arg = lambda name, default="": query.get(name, [default])[0]  # noqa: E731
+            if url.path == "/":
+                if self._allowed(need_token=False):
+                    self._reply(200, page.replace("{{TOKEN}}", token), "text/html")
+                return
+            if not self._allowed(need_token=True):
+                return
+            if url.path == "/api/state":
+                self._run(lambda: state(int(arg("layer", "0") or 0)))
+            elif url.path == "/api/keycodes":
+                self._run(lambda: sorted(KEYCODES))
+            elif url.path == "/api/parse":
+                def parse():
+                    try:
+                        value = parse_keycode(arg("code"))
+                    except ValueError as e:
+                        return {"ok": False, "error": str(e)}
+                    return {"ok": True, "value": f"0x{value:04X}", "name": format_keycode(value)}
+                self._run(parse)
+            elif url.path == "/api/dump":
+                self._run(lambda: get_pad().dump())
+            else:
+                self._reply(404, {"error": "Not found"})
+
+        def do_POST(self):
+            if not self._allowed(need_token=True):
+                return
+            try:
+                length = int(self.headers.get("Content-Length", "0"))
+                if length > 1_000_000:
+                    raise ValueError("Request too large")
+                body = json.loads(self.rfile.read(length) or b"{}")
+                if not isinstance(body, dict):
+                    raise ValueError("Expected a JSON object")
+            except ValueError as e:
+                self._reply(400, {"error": f"Bad request: {e}"})
+                return
+            path = urllib.parse.urlsplit(self.path).path
+
+            def set_key():
+                layer, key = int(body.get("layer", 0)), check_key(body.get("key", ""))
+                value = parse_keycode(str(body.get("code", "")))
+                p = get_pad()
+                if not 0 <= layer < p.layers:
+                    raise ValueError(f"Layer must be 0-{p.layers - 1}")
+                p.set(layer, key, value)
+                readback = p.get(layer, key)
+                return {"name": format_keycode(readback), "matches": readback == value}
+
+            def load():
+                data = body.get("data")
+                try:
+                    get_pad().load(data)
+                except (KeyError, TypeError, AttributeError) as e:
+                    raise ValueError("That file isn't a padmap keymap.") from e
+                return {"ok": True}
+
+            def reset():
+                get_pad().reset_keymap()
+                return {"ok": True}
+
+            def connect():
+                drop_pad()
+                return state(int(body.get("layer", 0)))
+
+            routes = {"/api/set": set_key, "/api/load": load, "/api/reset": reset, "/api/connect": connect}
+            if path in routes:
+                self._run(routes[path])
+            else:
+                self._reply(404, {"error": "Not found"})
+
+    server = http.server.HTTPServer(("127.0.0.1", port), Handler)
+    port = server.server_address[1]
+    session["hosts"] = {f"127.0.0.1:{port}", f"localhost:{port}"}
+    url = f"http://127.0.0.1:{port}/"
+    print(f"padmap is running at {url}", flush=True)
+    print("Keep this window open while you use the page. Press Ctrl+C to stop.", flush=True)
+    if open_browser:
+        webbrowser.open(url)
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        drop_pad()
+        server.server_close()
+    return 0
+
+
+# ---------------------------------------------------------------------------
 # Command line
 
 
@@ -560,6 +738,19 @@ def main(argv):
     if cmd in ("-h", "--help", "help"):
         print(__doc__)
         return 0
+    if cmd == "web":
+        port, open_browser = 0, True
+        rest = list(args)
+        while rest:
+            opt = rest.pop(0)
+            if opt == "--no-browser":
+                open_browser = False
+            elif opt == "--port" and rest and rest[0].isdigit():
+                port = int(rest.pop(0))
+            else:
+                print("Usage: padmap.py web [--port N] [--no-browser]", file=sys.stderr)
+                return 2
+        return run_web(port, open_browser)
     try:
         pad = Pad()
         if cmd == "info":

@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2040pad keymap</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f5f5f2;
+    --fg: #1c1c1a;
+    --muted: #66665f;
+    --card: #ffffff;
+    --line: #d6d6d0;
+    --key: #fbfbf9;
+    --accent: #2457d6;
+    --selected: #dfe8ff;
+    --error: #b42318;
+    --ok: #067647;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151514;
+      --fg: #ebebe8;
+      --muted: #a2a29b;
+      --card: #20201e;
+      --line: #3a3a36;
+      --key: #282826;
+      --accent: #84a6ff;
+      --selected: #26375e;
+      --error: #ff8f84;
+      --ok: #6fd39b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 480px; margin: 0 auto; padding: 20px 16px 32px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .status { margin: 0 0 16px; color: var(--muted); min-height: 1.45em; }
+  .status.error { color: var(--error); }
+  .status.ok { color: var(--ok); }
+  .bar { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .cap { font-size: 12px; color: var(--muted); text-align: center; margin-bottom: 2px; }
+  .encoder { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px dashed var(--line); }
+  button, .button {
+    font: inherit; color: inherit; background: var(--key); border: 1px solid var(--line);
+    border-radius: 8px; padding: 6px 12px; cursor: pointer;
+  }
+  button:hover:not(:disabled), .button:hover { border-color: var(--accent); }
+  button:disabled { opacity: 0.5; cursor: default; }
+  button.key {
+    width: 100%; min-height: 56px; padding: 6px; font-family: ui-monospace, Consolas, monospace;
+    font-size: 13px; overflow-wrap: anywhere;
+  }
+  button.key.selected { background: var(--selected); border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  select, input[type=text] {
+    font: inherit; color: inherit; background: var(--key); border: 1px solid var(--line);
+    border-radius: 8px; padding: 6px 8px;
+  }
+  form { display: flex; gap: 8px; }
+  form input { flex: 1; min-width: 0; font-family: ui-monospace, Consolas, monospace; }
+  .muted { color: var(--muted); }
+  .preview { margin: 6px 0 0; min-height: 1.45em; font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
+  .preview.error { color: var(--error); font-family: inherit; }
+  .tools { display: flex; gap: 8px; flex-wrap: wrap; }
+  p { margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>2040pad keymap</h1>
+  <p id="status" class="status">Connecting…</p>
+
+  <div class="bar">
+    <label>Layer <select id="layer" aria-label="Layer"></select></label>
+    <button id="reconnect" type="button">Reconnect</button>
+  </div>
+
+  <section class="card" aria-label="Pad layout">
+    <div class="grid encoder" id="encoder"></div>
+    <div class="grid" id="keys"></div>
+  </section>
+
+  <section class="card" aria-label="Change a key">
+    <p id="selected">Click a key or encoder action to change it.</p>
+    <form id="form">
+      <input id="code" type="text" list="names" autocomplete="off" spellcheck="false"
+             placeholder="KC_A, LCTL(KC_C), MO(1)…" aria-label="Keycode" disabled>
+      <button id="send" class="primary" type="submit" disabled>Send to pad</button>
+    </form>
+    <p id="preview" class="preview muted"></p>
+    <datalist id="names"></datalist>
+  </section>
+
+  <section class="tools" aria-label="Keymap file">
+    <button id="save" type="button">Save to file</button>
+    <label class="button">Load file<input id="file" type="file" accept=".json,application/json" hidden></label>
+    <button id="reset" type="button">Reset keymap</button>
+  </section>
+</main>
+
+<script>
+const TOKEN = "{{TOKEN}}";
+const LABELS = { ccw: "Turn left", enc: "Encoder press", cw: "Turn right" };
+for (let i = 1; i <= 12; i++) LABELS["k" + i] = "Key " + i;
+
+const view = { layer: 0, selected: null, connected: false, keys: {} };
+const $ = (id) => document.getElementById(id);
+const buttons = {};
+
+async function api(path, body) {
+  const options = { headers: { "X-Padmap-Token": TOKEN } };
+  if (body !== undefined) {
+    options.method = "POST";
+    options.headers["Content-Type"] = "application/json";
+    options.body = JSON.stringify(body);
+  }
+  let response;
+  try {
+    response = await fetch(path, options);
+  } catch {
+    throw new Error("Can't reach padmap. Is it still running?");
+  }
+  const data = await response.json().catch(() => ({ error: "Unexpected reply from padmap." }));
+  if (!response.ok) throw new Error(data.error || response.statusText);
+  return data;
+}
+
+function setStatus(text, kind = "") {
+  const el = $("status");
+  el.textContent = text;
+  el.className = "status " + kind;
+}
+
+function makeKey(key, parent) {
+  const wrap = document.createElement("div");
+  const cap = document.createElement("div");
+  cap.className = "cap";
+  cap.textContent = LABELS[key];
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "key";
+  button.addEventListener("click", () => select(key));
+  wrap.append(cap, button);
+  parent.append(wrap);
+  buttons[key] = button;
+}
+
+["ccw", "enc", "cw"].forEach((k) => makeKey(k, $("encoder")));
+for (let i = 1; i <= 12; i++) makeKey("k" + i, $("keys"));
+
+function render(state) {
+  view.connected = state.connected;
+  if (!state.connected) {
+    setStatus(state.error || "Not connected.", "error");
+    Object.values(buttons).forEach((b) => { b.textContent = ""; b.disabled = true; });
+    $("code").disabled = $("send").disabled = true;
+    return;
+  }
+  view.layer = state.layer;
+  view.keys = state.keys;
+  const select = $("layer");
+  if (select.options.length !== state.layers) {
+    select.innerHTML = "";
+    for (let i = 0; i < state.layers; i++) select.add(new Option(String(i), String(i)));
+  }
+  select.value = String(state.layer);
+  for (const [key, name] of Object.entries(state.keys)) {
+    buttons[key].textContent = name;
+    buttons[key].disabled = false;
+  }
+  if (!view.selected) setStatus(`Connected: VIA protocol ${state.protocol}, ${state.layers} layers. Changes save instantly.`, "ok");
+}
+
+async function refresh() {
+  try {
+    render(await api("/api/state?layer=" + view.layer));
+  } catch (e) {
+    render({ connected: false, error: e.message });
+  }
+}
+
+function select(key) {
+  if (view.selected) buttons[view.selected].classList.remove("selected");
+  view.selected = key;
+  buttons[key].classList.add("selected");
+  $("selected").textContent = `Layer ${view.layer}, ${LABELS[key]}: type a keycode, then Send.`;
+  const input = $("code");
+  input.disabled = $("send").disabled = !view.connected;
+  input.value = view.keys[key] || "";
+  input.focus();
+  input.select();
+  preview();
+}
+
+let previewTimer;
+function preview() {
+  clearTimeout(previewTimer);
+  previewTimer = setTimeout(async () => {
+    const code = $("code").value.trim();
+    const el = $("preview");
+    if (!code) { el.textContent = ""; return; }
+    try {
+      const r = await api("/api/parse?code=" + encodeURIComponent(code));
+      el.className = "preview " + (r.ok ? "muted" : "error");
+      el.textContent = r.ok ? `= ${r.value}  ${r.name}` : r.error;
+    } catch (e) {
+      el.className = "preview error";
+      el.textContent = e.message;
+    }
+  }, 150);
+}
+
+$("code").addEventListener("input", preview);
+
+$("form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!view.selected) return;
+  const key = view.selected;
+  try {
+    const r = await api("/api/set", { layer: view.layer, key, code: $("code").value });
+    buttons[key].textContent = r.name;
+    view.keys[key] = r.name;
+    setStatus(r.matches ? `Saved ${r.name} to layer ${view.layer}, ${LABELS[key]}.`
+                        : "The pad stored a different value than sent.", r.matches ? "ok" : "error");
+  } catch (e) {
+    setStatus(e.message, "error");
+    if (/plugged|reply|send|found|firmware/i.test(e.message)) refresh();
+  }
+});
+
+$("layer").addEventListener("change", () => {
+  view.layer = Number($("layer").value);
+  refresh().then(() => { if (view.selected) select(view.selected); });
+});
+
+$("reconnect").addEventListener("click", async () => {
+  setStatus("Connecting…");
+  try {
+    render(await api("/api/connect", { layer: view.layer }));
+  } catch (e) {
+    render({ connected: false, error: e.message });
+  }
+});
+
+$("save").addEventListener("click", async () => {
+  try {
+    const data = await api("/api/dump");
+    const blob = new Blob([JSON.stringify(data, null, 2) + "\n"], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "2040pad-keymap.json";
+    link.click();
+    URL.revokeObjectURL(link.href);
+    setStatus("Saved the keymap to 2040pad-keymap.json in your downloads.", "ok");
+  } catch (e) {
+    setStatus(e.message, "error");
+  }
+});
+
+$("file").addEventListener("change", async (event) => {
+  const file = event.target.files[0];
+  event.target.value = "";
+  if (!file) return;
+  let data;
+  try {
+    data = JSON.parse(await file.text());
+  } catch {
+    setStatus("That file isn't valid JSON.", "error");
+    return;
+  }
+  if (!confirm(`Write ${file.name} to the pad, replacing the current keymap?`)) return;
+  try {
+    await api("/api/load", { data });
+    setStatus(`Loaded ${file.name} onto the pad.`, "ok");
+  } catch (e) {
+    setStatus(e.message, "error");
+  }
+  refresh();
+});
+
+$("reset").addEventListener("click", async () => {
+  if (!confirm("Reset every layer to the keymap built into the firmware?")) return;
+  try {
+    await api("/api/reset", {});
+    setStatus("Keymap reset to the firmware default.", "ok");
+  } catch (e) {
+    setStatus(e.message, "error");
+  }
+  refresh();
+});
+
+api("/api/keycodes").then((names) => {
+  const list = $("names");
+  for (const name of names) list.append(new Option(name));
+}).catch(() => {});
+
+refresh();
+</script>
+</body>
+</html>
