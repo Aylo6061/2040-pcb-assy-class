@@ -6,12 +6,41 @@ Changes are saved on the pad as soon as you send them, and survive unplugging.
 
 ## Setup
 
+### 1. Install tkinter from your operating system
+
+The window uses tkinter, which pip can't install. Python from python.org includes it on Windows and macOS. Otherwise, install it with your system package manager:
+
+| System | Command |
+|---|---|
+| Debian, Ubuntu, Raspberry Pi OS | `sudo apt install python3-tk python3-venv` |
+| Fedora | `sudo dnf install python3-tkinter` |
+| Arch | `sudo pacman -S tk` |
+| macOS with Homebrew Python | `brew install python-tk@3.X`, using your Python version for `3.X` |
+| Windows | Rerun the python.org installer, choose Modify, and select **tcl/tk and IDLE** |
+
+To check, run `python -c "import tkinter"`. It should print nothing. The command-line commands work without tkinter.
+
+### 2. Create a virtual environment and install hidapi
+
+These systems block `pip install` into the system Python, which shows up as an "externally-managed-environment" error. A virtual environment avoids that, and it still uses the system's tkinter.
+
+Windows:
+
 ```bash
 python -m venv .venv
 .venv/Scripts/python -m pip install -r requirements.txt
 ```
 
-On macOS or Linux, use `.venv/bin/python` instead. Linux also needs a udev rule to allow access to the pad's HID device.
+macOS and Linux:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+```
+
+Install tkinter before creating the virtual environment. If you add it later, delete `.venv` and create it again.
+
+Linux also needs a udev rule to allow access to the pad's HID device.
 
 ## Window
 

@@ -1,1 +1,7 @@
+# Installed with pip:
 hidapi>=0.14
+
+# Also required for the window, but provided by the operating system, not pip:
+#   tkinter  (Debian/Ubuntu: python3-tk, Fedora: python3-tkinter, Arch: tk,
+#             Homebrew: python-tk@3.X, Windows: part of the python.org installer)
+# See README.md. The command-line commands work without it.

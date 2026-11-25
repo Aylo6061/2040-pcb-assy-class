@@ -339,9 +339,25 @@ def _position(key):
 # Window
 
 
+TKINTER_HELP = """The window needs tkinter, which isn't installed for this Python.
+tkinter comes from your operating system, not pip. Install it, then recreate the venv:
+
+    Debian / Ubuntu / Raspberry Pi OS:  sudo apt install python3-tk python3-venv
+    Fedora:                             sudo dnf install python3-tkinter
+    Arch:                               sudo pacman -S tk
+    macOS with Homebrew:                brew install python-tk@3.X  (3.X = your Python version)
+    Windows:                            rerun the python.org installer and select "tcl/tk and IDLE"
+
+The command-line commands work without it. Run: python padmap.py --help"""
+
+
 def run_gui():
-    import tkinter as tk
-    from tkinter import filedialog, messagebox, ttk
+    try:
+        import tkinter as tk
+        from tkinter import filedialog, messagebox, ttk
+    except ImportError:
+        print(TKINTER_HELP, file=sys.stderr)
+        return 1
 
     root = tk.Tk()
     root.title("2040pad keymap")
@@ -530,6 +546,7 @@ def run_gui():
         status.set("keycodes.json is missing. Run gen_keycodes.py.")
     root.after(100, lambda: connect(quiet=True))
     root.mainloop()
+    return 0
 
 
 # ---------------------------------------------------------------------------
@@ -538,9 +555,11 @@ def run_gui():
 
 def main(argv):
     if not argv:
-        run_gui()
-        return 0
+        return run_gui()
     cmd, args = argv[0], argv[1:]
+    if cmd in ("-h", "--help", "help"):
+        print(__doc__)
+        return 0
     try:
         pad = Pad()
         if cmd == "info":
